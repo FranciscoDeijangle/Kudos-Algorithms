@@ -14,6 +14,11 @@ Brief introduction to the greedy algorithm, linear programming and local search.
 - `ArrayInversion.java` Merge Sort for counting number of inversions in an given unsorted array.
 - `ArrayInversion.txt`  The raw array elements used in code.
 
+**KNN** last updated 2015.7.1
+
+- `KNN.java` K-nearest neighborhood in predicting class labels. Use the data in the training file to "train" a model and predict the class label for in testing set in the testing file.
+
+
 **MinCut:** last updated 2015.7.26
 
 - `GraphAdjacencyList.java` Simple demonstration on adjancency list with graph.

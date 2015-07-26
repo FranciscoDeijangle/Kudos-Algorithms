@@ -33,7 +33,7 @@ class Inverse
 		long count = 0;
 		int j = 0;
 		// store the constant of the initial location of the passed in array
-		int lowpoint = lowpt;
+		int lowpoint = lowpt; 
 		// make a constant upper bound for the left array
 		int midpoint = midpt - 1;
 		// length of the sub-array at that recursive level
@@ -58,8 +58,6 @@ class Inverse
 			unsorted[j++] = array[midpt++];
 		// fill in the numbers after arranging. remember to start filling from the low point
 		System.arraycopy( unsorted, 0, array, lowpoint, length );
-		/*for( j = 0; j < length; j++ )
-			array[ lowpoint + j ] = unsorted[j];*/
 		
 		return count;
 	}

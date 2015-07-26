@@ -6,22 +6,21 @@
  *  http://www.programmershare.com/632078/ 
  */
  
+
+
+
+
 import java.io.*;
 import java.util.*;
 
 class TravelSalesman
 {
 	String filepath = "C:\\Users\\ASUS\\workspace\\Algorithm\\src\\HillClimbing.txt";
-	// number of iteration for the hill climbing (training the answer)
-	int iteration = 500;
-	// number of cities = size of data
-	int citynum;
-	// array that stores the x and y coordinates
-	int[] x; int[] y;
-	// distance matrix
-	int[][] distances;
-	// order of the city, i.e. tour
-	int[] citytour;
+	int iteration = 500; // number of iteration for the hill climbing (training the answer)
+	int citynum; // number of cities = size of data
+	int[] x, y; // array that stores the x and y coordinates
+	int[][] distances; // pairwise distance matrix
+	int[] citytour; // order of the city, i.e. tour
 	
 	TravelSalesman() throws IOException
 	{
