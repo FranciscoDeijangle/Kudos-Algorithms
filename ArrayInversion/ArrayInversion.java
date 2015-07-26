@@ -1,4 +1,4 @@
-// Merge Sort for counting number of inversions in an given unsorted array.
+// Merge Sort for counting number of inversions in an arbitrarily ordered integer array, with no integer repeated
 
 import java.io.*;
 import java.util.*;
@@ -63,8 +63,6 @@ class Inverse
 	}
 }
 
-// Extension of the mergeSort to counting the number of inversions of an 
-// arbitrarily ordered integer array, with no integer repeated.
 public class ArrayInversion 
 {
 	public static void display( int[] array )
