@@ -126,7 +126,7 @@ class KNNCalculations
 		}
 		// print the corresponding count of each distinctLabels
 		for( int i = 0; i< distinctLabels.size(); i++ ) 
-			System.out.print(distinctLabels.get(i)+" "+count[i]+" ");
+			System.out.print( distinctLabels.get(i) + " " + count[i] + " " );
 		// get the maximum count
 		int max = count[0];
 		for( int i = 1; i < count.length; i++ )

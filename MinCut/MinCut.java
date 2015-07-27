@@ -35,7 +35,7 @@ class RandomContraction
 				if( e == 0 )
 				{
 					node = Integer.valueOf( str.nextToken() );
-					Adjacency_List.put( node , new LinkedList<Integer>() );
+					Adjacency_List.put( node , new ArrayList<Integer>() );
 				}else
 				{
 					List<Integer> edgelist = Adjacency_List.get(node);

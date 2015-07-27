@@ -13,7 +13,7 @@ class AdjacencyList1
 		// initiate the list size ; match it with the number of vertices
 		Adjacency_List = new HashMap< Integer, List<Integer> >();
 		for( int v = 1; v <= vertices; v++ )
-			Adjacency_List.put( v, new LinkedList<Integer>() );
+			Adjacency_List.put( v, new ArrayList<Integer>() );
 	}
 	
 	public void process()
