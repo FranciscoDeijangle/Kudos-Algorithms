@@ -31,7 +31,7 @@ class KNNCalculations
 		int counttokensize = st1.countTokens();
 		// initialize the data size ; exclude the class label
 		double[][] data = new double[list1.size()][counttokensize-1];
-		String[][] dataclass = new String[list1.size()][1];
+		String[] dataclass = new String[list1.size()];
 		
 		for( int i = 0; i < list1.size(); i++ ) 
 		{
@@ -39,7 +39,7 @@ class KNNCalculations
 			for(int j = 0; j < counttokensize; j++ )
 			{
 				if( j == ( counttokensize-1 ) ) // the last token is put to data class instead of the data
-					dataclass[i][0] = ( st1.nextToken() );
+					dataclass[i] = ( st1.nextToken() );
 				else
 					data[i][j] = Double.parseDouble( st1.nextToken() ) ;
 			}
@@ -48,7 +48,7 @@ class KNNCalculations
 		for( int i = 0; i < list1.size(); i++ ) 
 		{
 			String str = new String(); 
-			str = dataclass[i][0];
+			str = dataclass[i];
 			instanceList.add( new Instance( data[i], str ) );
 		}	
 		
