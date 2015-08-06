@@ -112,6 +112,7 @@ public class MinCut
 	public static void main(String[] args) throws IOException
 	{
 		RandomContraction randomcontraction = new RandomContraction();
+		// run the min cut process, idle iteration
 		int iteration = 80;
 		int[] mincut = new int[iteration];
 		for( int i = 0; i < iteration; i++ )
@@ -123,6 +124,6 @@ public class MinCut
 			if( min > mincut[i] )
 				min = mincut[i];
 		}
-		System.out.println(min);
+		System.out.println(min); // 17
 	}
 }

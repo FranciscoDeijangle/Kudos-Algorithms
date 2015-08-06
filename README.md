@@ -22,5 +22,5 @@
 
 **SCC:** last updated 2015.8.6
 
-- `SCC.java` Kosaraju's algorithm that caculates the strongly connected component of a directed graph. 
+- `SCC.java` Kosaraju's algorithm. Calculates strongly connected component of a directed graph. 
 - `SCC.txt`  data that stores the edges of a directed graph.
