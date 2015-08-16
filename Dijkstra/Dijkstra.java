@@ -42,7 +42,6 @@ class DijkstraCalculation
 	{
 		// read in raw data
 		String filepath = "C:\\Users\\ASUS\\workspace\\Algorithm\\src\\Dijkstra.txt";
-		//String filepath = "C:\\Users\\ASUS\\workspace\\Algorithm\\src\\Dijkstratest.txt";
 		Scanner scanner = new Scanner( new File( filepath ) );
 		List<String> data = new ArrayList<String>();
 		
