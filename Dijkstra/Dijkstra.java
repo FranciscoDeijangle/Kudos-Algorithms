@@ -28,15 +28,16 @@ class Edges
 	
 	public String toString()
 	{
-		return String.format("%d", head);
+		return String.format( "%d", head );
 	}
 }
 
 class DijkstraCalculation
 {
+	Map< Integer, Integer > shortestpath;
 	Edges[] adjacencylist;
 	int arraysize;
-	Map< Integer, Integer > shortestpath;
+	int source;	
 	
 	DijkstraCalculation() throws IOException
 	{
@@ -52,9 +53,8 @@ class DijkstraCalculation
 		// initiate adjacency list array, add 1 to the size because there're no node 0
 		arraysize = data.size()+1;
 		adjacencylist = new Edges[arraysize]; 
-		shortestpath  = new HashMap< Integer, Integer >();
-		
-		// set up the adjacency list and the shortestpath
+
+		// set up the adjacency list
 		for( String string : data )
 		{
 			String[] linesplit = string.split("\\s+");
@@ -69,19 +69,19 @@ class DijkstraCalculation
 				edge.addEdge( tail, weight );
 			}
 			adjacencylist[head] = edge;
-			
-			shortestpath.put( head, null );
 		}
 	}
 	
-	public int[] calculationProcess( int source )
+	public int[] calculationProcess( int sourcenode )
 	{
-		// initiate distance of the array, the source vertex is initiated as 0 
+		// initiate distance of the array, the source vertex is initiated as 0
+		source = sourcenode;
 		int[] shortestdistance = new int[arraysize];
 		Arrays.fill( shortestdistance, Integer.MAX_VALUE );
 		shortestdistance[source] = 0;
 		
-		// initiate the queue with the source node 
+		// initiate the queue with the source node and the shortest path
+		shortestpath  = new HashMap< Integer, Integer >();
 		Queue<Integer> node = new PriorityQueue<Integer>();
 		node.add(source);
 		
@@ -105,7 +105,7 @@ class DijkstraCalculation
 		return shortestdistance;
 	}
 	
-    public List<Integer> getShortestPath( int source, int destination )
+    public List<Integer> getShortestPath( int destination )
     {
     	List<Integer> path = new ArrayList<Integer>();
     	// back trace the shortest path from the destination to the source
@@ -138,7 +138,9 @@ public class Dijkstra
 		System.out.println();
 		
 		// print the traversed nodes of the shortest path from source to destination node
-		System.out.println( calculation.getShortestPath( source, 7 ) );
+		int destination = 7;
+		System.out.println(calculation.getShortestPath(destination) );
+		
 	}
 }
 
